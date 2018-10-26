@@ -56,7 +56,7 @@ public class DFS extends GraphAlgorithm<DFS.DFSVertex> {
 	return d;
     }
 
-    public void topsort(Vertex v)
+    public void DFSSort(Vertex v)
     {
     	 visit[v.getIndex()] = true; 
          //Integer i; 
@@ -75,7 +75,7 @@ public class DFS extends GraphAlgorithm<DFS.DFSVertex> {
              if (!visit[u.toVertex().getIndex()]) 
              {
             	// visit[i.getIndex()] = true;
-                 topsort(u.toVertex());
+                 DFSSort(u.toVertex());
              }
          } 
    
@@ -99,7 +99,7 @@ public class DFS extends GraphAlgorithm<DFS.DFSVertex> {
     		//if(u.inDegree() == 0)
     		{
     		if(visit[u.getIndex()]== false)
-    			topsort(u);
+    			DFSSort(u);
     		//break;
     		}
     	}
